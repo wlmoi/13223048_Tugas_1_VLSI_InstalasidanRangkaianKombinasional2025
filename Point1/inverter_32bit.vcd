@@ -1,0 +1,44 @@
+$date
+	Sat Sep 20 22:56:19 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench_inverter_32bit $end
+$var wire 32 ! test_y [31:0] $end
+$var reg 32 " test_a [31:0] $end
+$scope module uut_inverter $end
+$var wire 32 # a [31:0] $end
+$var wire 32 $ y [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b11111111111111111111111111111111 $
+b0 #
+b0 "
+b11111111111111111111111111111111 !
+$end
+#10
+b0 !
+b0 $
+b11111111111111111111111111111111 "
+b11111111111111111111111111111111 #
+#20
+b11101101110010111010100110000111 !
+b11101101110010111010100110000111 $
+b10010001101000101011001111000 "
+b10010001101000101011001111000 #
+#30
+b11111111111111110000000000000000 !
+b11111111111111110000000000000000 $
+b1111111111111111 "
+b1111111111111111 #
+#40

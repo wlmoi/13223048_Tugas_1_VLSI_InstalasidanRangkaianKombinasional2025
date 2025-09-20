@@ -1,0 +1,285 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000228d8f4d950 .scope module, "testbench_full_neuron" "testbench_full_neuron" 2 3;
+ .timescale 0 0;
+v00000228d8fb1f30_0 .var "bias_in", 7 0;
+v00000228d8fb1d50_0 .net "neuron_output", 17 0, L_00000228d8fb62b0;  1 drivers
+v00000228d8fb3150_0 .var "w0", 7 0;
+v00000228d8fb31f0_0 .var "w1", 7 0;
+v00000228d8fb3650_0 .var "w2", 7 0;
+v00000228d8fb2390_0 .var "w3", 7 0;
+v00000228d8fb3330_0 .var "x0", 7 0;
+v00000228d8fb2070_0 .var "x1", 7 0;
+v00000228d8fb3290_0 .var "x2", 7 0;
+v00000228d8fb3470_0 .var "x3", 7 0;
+S_00000228d8f4dae0 .scope module, "uut_neuron" "full_neuron" 2 12, 3 3 0, S_00000228d8f4d950;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "x0";
+    .port_info 1 /INPUT 8 "x1";
+    .port_info 2 /INPUT 8 "x2";
+    .port_info 3 /INPUT 8 "x3";
+    .port_info 4 /INPUT 8 "w0";
+    .port_info 5 /INPUT 8 "w1";
+    .port_info 6 /INPUT 8 "w2";
+    .port_info 7 /INPUT 8 "w3";
+    .port_info 8 /INPUT 8 "bias_in";
+    .port_info 9 /OUTPUT 18 "neuron_output";
+v00000228d8fb3790_0 .net "bias_in", 7 0, v00000228d8fb1f30_0;  1 drivers
+v00000228d8fb1fd0_0 .net "neuron_output", 17 0, L_00000228d8fb62b0;  alias, 1 drivers
+v00000228d8fb1e90_0 .net "sum_before_relu", 17 0, L_00000228d8fb6710;  1 drivers
+v00000228d8fb30b0_0 .net "w0", 7 0, v00000228d8fb3150_0;  1 drivers
+v00000228d8fb18f0_0 .net "w1", 7 0, v00000228d8fb31f0_0;  1 drivers
+v00000228d8fb2c50_0 .net "w2", 7 0, v00000228d8fb3650_0;  1 drivers
+v00000228d8fb27f0_0 .net "w3", 7 0, v00000228d8fb2390_0;  1 drivers
+v00000228d8fb2890_0 .net "x0", 7 0, v00000228d8fb3330_0;  1 drivers
+v00000228d8fb29d0_0 .net "x1", 7 0, v00000228d8fb2070_0;  1 drivers
+v00000228d8fb2250_0 .net "x2", 7 0, v00000228d8fb3290_0;  1 drivers
+v00000228d8fb22f0_0 .net "x3", 7 0, v00000228d8fb3470_0;  1 drivers
+S_00000228d8f4b410 .scope module, "uut_neuron_core" "neural_network_neuron_core" 3 13, 4 3 0, S_00000228d8f4dae0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "x0";
+    .port_info 1 /INPUT 8 "x1";
+    .port_info 2 /INPUT 8 "x2";
+    .port_info 3 /INPUT 8 "x3";
+    .port_info 4 /INPUT 8 "w0";
+    .port_info 5 /INPUT 8 "w1";
+    .port_info 6 /INPUT 8 "w2";
+    .port_info 7 /INPUT 8 "w3";
+    .port_info 8 /INPUT 8 "bias_in";
+    .port_info 9 /OUTPUT 18 "sum_out";
+v00000228d8f12f20_0 .net/s *"_ivl_0", 15 0, L_00000228d8fb1990;  1 drivers
+v00000228d8f4dc70_0 .net/s *"_ivl_12", 15 0, L_00000228d8fb2bb0;  1 drivers
+v00000228d8f4dd10_0 .net/s *"_ivl_14", 15 0, L_00000228d8fb1ad0;  1 drivers
+v00000228d8f4b5a0_0 .net/s *"_ivl_18", 15 0, L_00000228d8fb2cf0;  1 drivers
+v00000228d8f4b640_0 .net/s *"_ivl_2", 15 0, L_00000228d8fb2930;  1 drivers
+v00000228d8f4b6e0_0 .net/s *"_ivl_20", 15 0, L_00000228d8fb2d90;  1 drivers
+v00000228d8f4b780_0 .net/s *"_ivl_24", 16 0, L_00000228d8fb2610;  1 drivers
+v00000228d8fb0b60_0 .net/s *"_ivl_26", 16 0, L_00000228d8fb35b0;  1 drivers
+v00000228d8fb1060_0 .net/s *"_ivl_30", 16 0, L_00000228d8fb2e30;  1 drivers
+v00000228d8fb1600_0 .net/s *"_ivl_32", 16 0, L_00000228d8fb26b0;  1 drivers
+v00000228d8fb1100_0 .net/s *"_ivl_36", 17 0, L_00000228d8fb2750;  1 drivers
+v00000228d8fb08e0_0 .net/s *"_ivl_38", 17 0, L_00000228d8fb1c10;  1 drivers
+v00000228d8fb0fc0_0 .net *"_ivl_43", 0 0, L_00000228d8fb56d0;  1 drivers
+v00000228d8fb16a0_0 .net *"_ivl_44", 9 0, L_00000228d8fb5c70;  1 drivers
+v00000228d8fb1740_0 .net/s *"_ivl_6", 15 0, L_00000228d8fb2430;  1 drivers
+v00000228d8fb1420_0 .net/s *"_ivl_8", 15 0, L_00000228d8fb1a30;  1 drivers
+v00000228d8fb0c00_0 .net "bias_extended", 17 0, L_00000228d8fb5450;  1 drivers
+v00000228d8fb0f20_0 .net "bias_in", 7 0, v00000228d8fb1f30_0;  alias, 1 drivers
+v00000228d8fb11a0_0 .net "p0", 15 0, L_00000228d8fb33d0;  1 drivers
+v00000228d8fb14c0_0 .net "p1", 15 0, L_00000228d8fb3510;  1 drivers
+v00000228d8fb1560_0 .net "p2", 15 0, L_00000228d8fb2a70;  1 drivers
+v00000228d8fb0ca0_0 .net "p3", 15 0, L_00000228d8fb24d0;  1 drivers
+v00000228d8fb0ac0_0 .net "s0", 16 0, L_00000228d8fb1b70;  1 drivers
+v00000228d8fb0980_0 .net "s1", 16 0, L_00000228d8fb2b10;  1 drivers
+v00000228d8fb1240_0 .net "s_products", 17 0, L_00000228d8fb2f70;  1 drivers
+v00000228d8fb17e0_0 .net "sum_out", 17 0, L_00000228d8fb6710;  alias, 1 drivers
+v00000228d8fb0a20_0 .net "w0", 7 0, v00000228d8fb3150_0;  alias, 1 drivers
+v00000228d8fb0d40_0 .net "w1", 7 0, v00000228d8fb31f0_0;  alias, 1 drivers
+v00000228d8fb12e0_0 .net "w2", 7 0, v00000228d8fb3650_0;  alias, 1 drivers
+v00000228d8fb0de0_0 .net "w3", 7 0, v00000228d8fb2390_0;  alias, 1 drivers
+v00000228d8fb1380_0 .net "x0", 7 0, v00000228d8fb3330_0;  alias, 1 drivers
+v00000228d8fb0e80_0 .net "x1", 7 0, v00000228d8fb2070_0;  alias, 1 drivers
+v00000228d8fb3010_0 .net "x2", 7 0, v00000228d8fb3290_0;  alias, 1 drivers
+v00000228d8fb36f0_0 .net "x3", 7 0, v00000228d8fb3470_0;  alias, 1 drivers
+L_00000228d8fb1990 .extend/s 16, v00000228d8fb3330_0;
+L_00000228d8fb2930 .extend/s 16, v00000228d8fb3150_0;
+L_00000228d8fb33d0 .arith/mult 16, L_00000228d8fb1990, L_00000228d8fb2930;
+L_00000228d8fb2430 .extend/s 16, v00000228d8fb2070_0;
+L_00000228d8fb1a30 .extend/s 16, v00000228d8fb31f0_0;
+L_00000228d8fb3510 .arith/mult 16, L_00000228d8fb2430, L_00000228d8fb1a30;
+L_00000228d8fb2bb0 .extend/s 16, v00000228d8fb3290_0;
+L_00000228d8fb1ad0 .extend/s 16, v00000228d8fb3650_0;
+L_00000228d8fb2a70 .arith/mult 16, L_00000228d8fb2bb0, L_00000228d8fb1ad0;
+L_00000228d8fb2cf0 .extend/s 16, v00000228d8fb3470_0;
+L_00000228d8fb2d90 .extend/s 16, v00000228d8fb2390_0;
+L_00000228d8fb24d0 .arith/mult 16, L_00000228d8fb2cf0, L_00000228d8fb2d90;
+L_00000228d8fb2610 .extend/s 17, L_00000228d8fb33d0;
+L_00000228d8fb35b0 .extend/s 17, L_00000228d8fb3510;
+L_00000228d8fb1b70 .arith/sum 17, L_00000228d8fb2610, L_00000228d8fb35b0;
+L_00000228d8fb2e30 .extend/s 17, L_00000228d8fb2a70;
+L_00000228d8fb26b0 .extend/s 17, L_00000228d8fb24d0;
+L_00000228d8fb2b10 .arith/sum 17, L_00000228d8fb2e30, L_00000228d8fb26b0;
+L_00000228d8fb2750 .extend/s 18, L_00000228d8fb1b70;
+L_00000228d8fb1c10 .extend/s 18, L_00000228d8fb2b10;
+L_00000228d8fb2f70 .arith/sum 18, L_00000228d8fb2750, L_00000228d8fb1c10;
+L_00000228d8fb56d0 .part v00000228d8fb1f30_0, 7, 1;
+LS_00000228d8fb5c70_0_0 .concat [ 1 1 1 1], L_00000228d8fb56d0, L_00000228d8fb56d0, L_00000228d8fb56d0, L_00000228d8fb56d0;
+LS_00000228d8fb5c70_0_4 .concat [ 1 1 1 1], L_00000228d8fb56d0, L_00000228d8fb56d0, L_00000228d8fb56d0, L_00000228d8fb56d0;
+LS_00000228d8fb5c70_0_8 .concat [ 1 1 0 0], L_00000228d8fb56d0, L_00000228d8fb56d0;
+L_00000228d8fb5c70 .concat [ 4 4 2 0], LS_00000228d8fb5c70_0_0, LS_00000228d8fb5c70_0_4, LS_00000228d8fb5c70_0_8;
+L_00000228d8fb5450 .concat [ 8 10 0 0], v00000228d8fb1f30_0, L_00000228d8fb5c70;
+L_00000228d8fb6710 .arith/sum 18, L_00000228d8fb2f70, L_00000228d8fb5450;
+S_00000228d8f44220 .scope module, "uut_relu" "relu_activation" 3 21, 5 3 0, S_00000228d8f4dae0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 18 "input_val";
+    .port_info 1 /OUTPUT 18 "output_val";
+L_00000228d9000088 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+L_00000228d8f508b0 .functor XNOR 1, L_00000228d8fb5b30, L_00000228d9000088, C4<0>, C4<0>;
+v00000228d8fb1cb0_0 .net *"_ivl_1", 0 0, L_00000228d8fb5b30;  1 drivers
+v00000228d8fb1df0_0 .net/2u *"_ivl_2", 0 0, L_00000228d9000088;  1 drivers
+v00000228d8fb2ed0_0 .net *"_ivl_4", 0 0, L_00000228d8f508b0;  1 drivers
+L_00000228d90000d0 .functor BUFT 1, C4<000000000000000000>, C4<0>, C4<0>, C4<0>;
+v00000228d8fb2110_0 .net/2u *"_ivl_6", 17 0, L_00000228d90000d0;  1 drivers
+v00000228d8fb21b0_0 .net "input_val", 17 0, L_00000228d8fb6710;  alias, 1 drivers
+v00000228d8fb2570_0 .net "output_val", 17 0, L_00000228d8fb62b0;  alias, 1 drivers
+L_00000228d8fb5b30 .part L_00000228d8fb6710, 17, 1;
+L_00000228d8fb62b0 .functor MUXZ 18, L_00000228d90000d0, L_00000228d8fb6710, L_00000228d8f508b0, C4<>;
+    .scope S_00000228d8f4d950;
+T_0 ;
+    %vpi_call 2 27 "$dumpfile", "full_neuron.vcd" {0 0 0};
+    %vpi_call 2 28 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000228d8f4d950 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_00000228d8f4d950;
+T_1 ;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb3330_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb2070_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb3290_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb3470_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb3150_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb31f0_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb3650_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb2390_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb1f30_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 10, 0, 8;
+    %store/vec4 v00000228d8fb3330_0, 0, 8;
+    %pushi/vec4 5, 0, 8;
+    %store/vec4 v00000228d8fb2070_0, 0, 8;
+    %pushi/vec4 2, 0, 8;
+    %store/vec4 v00000228d8fb3290_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v00000228d8fb3470_0, 0, 8;
+    %pushi/vec4 2, 0, 8;
+    %store/vec4 v00000228d8fb3150_0, 0, 8;
+    %pushi/vec4 3, 0, 8;
+    %store/vec4 v00000228d8fb31f0_0, 0, 8;
+    %pushi/vec4 4, 0, 8;
+    %store/vec4 v00000228d8fb3650_0, 0, 8;
+    %pushi/vec4 5, 0, 8;
+    %store/vec4 v00000228d8fb2390_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v00000228d8fb1f30_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 255, 0, 8;
+    %store/vec4 v00000228d8fb3330_0, 0, 8;
+    %pushi/vec4 255, 0, 8;
+    %store/vec4 v00000228d8fb2070_0, 0, 8;
+    %pushi/vec4 255, 0, 8;
+    %store/vec4 v00000228d8fb3290_0, 0, 8;
+    %pushi/vec4 255, 0, 8;
+    %store/vec4 v00000228d8fb3470_0, 0, 8;
+    %pushi/vec4 2, 0, 8;
+    %store/vec4 v00000228d8fb3150_0, 0, 8;
+    %pushi/vec4 2, 0, 8;
+    %store/vec4 v00000228d8fb31f0_0, 0, 8;
+    %pushi/vec4 2, 0, 8;
+    %store/vec4 v00000228d8fb3650_0, 0, 8;
+    %pushi/vec4 2, 0, 8;
+    %store/vec4 v00000228d8fb2390_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v00000228d8fb1f30_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 127, 0, 8;
+    %store/vec4 v00000228d8fb3330_0, 0, 8;
+    %pushi/vec4 127, 0, 8;
+    %store/vec4 v00000228d8fb2070_0, 0, 8;
+    %pushi/vec4 127, 0, 8;
+    %store/vec4 v00000228d8fb3290_0, 0, 8;
+    %pushi/vec4 127, 0, 8;
+    %store/vec4 v00000228d8fb3470_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v00000228d8fb3150_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v00000228d8fb31f0_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v00000228d8fb3650_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v00000228d8fb2390_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v00000228d8fb1f30_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb3330_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb2070_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb3290_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb3470_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb3150_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb31f0_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb3650_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb2390_0, 0, 8;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000228d8fb1f30_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 128, 0, 8;
+    %store/vec4 v00000228d8fb3330_0, 0, 8;
+    %pushi/vec4 128, 0, 8;
+    %store/vec4 v00000228d8fb2070_0, 0, 8;
+    %pushi/vec4 128, 0, 8;
+    %store/vec4 v00000228d8fb3290_0, 0, 8;
+    %pushi/vec4 128, 0, 8;
+    %store/vec4 v00000228d8fb3470_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v00000228d8fb3150_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v00000228d8fb31f0_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v00000228d8fb3650_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v00000228d8fb2390_0, 0, 8;
+    %pushi/vec4 127, 0, 8;
+    %store/vec4 v00000228d8fb1f30_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 5, 0, 8;
+    %store/vec4 v00000228d8fb3330_0, 0, 8;
+    %pushi/vec4 255, 0, 8;
+    %store/vec4 v00000228d8fb2070_0, 0, 8;
+    %pushi/vec4 10, 0, 8;
+    %store/vec4 v00000228d8fb3290_0, 0, 8;
+    %pushi/vec4 240, 0, 8;
+    %store/vec4 v00000228d8fb3470_0, 0, 8;
+    %pushi/vec4 2, 0, 8;
+    %store/vec4 v00000228d8fb3150_0, 0, 8;
+    %pushi/vec4 3, 0, 8;
+    %store/vec4 v00000228d8fb31f0_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v00000228d8fb3650_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v00000228d8fb2390_0, 0, 8;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v00000228d8fb1f30_0, 0, 8;
+    %delay 10, 0;
+    %vpi_call 2 137 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "testbench_full_neuron.v";
+    "full_neuron.v";
+    "neural_network_neuron_core.v";
+    "relu_activation.v";

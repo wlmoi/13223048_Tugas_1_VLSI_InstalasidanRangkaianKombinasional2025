@@ -1,0 +1,55 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001ce47539e10 .scope module, "testbench_inverter_32bit" "testbench_inverter_32bit" 2 3;
+ .timescale 0 0;
+v000001ce474255e0_0 .var "test_a", 31 0;
+v000001ce47425680_0 .net "test_y", 31 0, L_000001ce47539fa0;  1 drivers
+S_000001ce47425450 .scope module, "uut_inverter" "inverter_32bit" 2 8, 3 3 0, S_000001ce47539e10;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /OUTPUT 32 "y";
+L_000001ce47539fa0 .functor NOT 32, v000001ce474255e0_0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+v000001ce473f2f40_0 .net "a", 31 0, v000001ce474255e0_0;  1 drivers
+v000001ce473f2b70_0 .net "y", 31 0, L_000001ce47539fa0;  alias, 1 drivers
+    .scope S_000001ce47539e10;
+T_0 ;
+    %vpi_call 2 14 "$dumpfile", "inverter_32bit.vcd" {0 0 0};
+    %vpi_call 2 15 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001ce47539e10 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_000001ce47539e10;
+T_1 ;
+    %vpi_call 2 19 "$display", "Starting simulation for Inverter gate..." {0 0 0};
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v000001ce474255e0_0, 0, 32;
+    %delay 10, 0;
+    %vpi_call 2 24 "$display", "Time=%0t: A=0x%h, Y=0x%h", $time, v000001ce474255e0_0, v000001ce47425680_0 {0 0 0};
+    %pushi/vec4 4294967295, 0, 32;
+    %store/vec4 v000001ce474255e0_0, 0, 32;
+    %delay 10, 0;
+    %vpi_call 2 29 "$display", "Time=%0t: A=0x%h, Y=0x%h", $time, v000001ce474255e0_0, v000001ce47425680_0 {0 0 0};
+    %pushi/vec4 305419896, 0, 32;
+    %store/vec4 v000001ce474255e0_0, 0, 32;
+    %delay 10, 0;
+    %vpi_call 2 34 "$display", "Time=%0t: A=0x%h, Y=0x%h", $time, v000001ce474255e0_0, v000001ce47425680_0 {0 0 0};
+    %pushi/vec4 65535, 0, 32;
+    %store/vec4 v000001ce474255e0_0, 0, 32;
+    %delay 10, 0;
+    %vpi_call 2 39 "$display", "Time=%0t: A=0x%h, Y=0x%h", $time, v000001ce474255e0_0, v000001ce47425680_0 {0 0 0};
+    %vpi_call 2 41 "$display", "Finishing simulation for Inverter gate." {0 0 0};
+    %vpi_call 2 42 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench_inverter_32bit.v";
+    "inverter_32bit.v";

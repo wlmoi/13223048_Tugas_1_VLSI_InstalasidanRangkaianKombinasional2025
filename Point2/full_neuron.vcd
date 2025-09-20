@@ -1,0 +1,342 @@
+$date
+	Sat Sep 20 23:05:43 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench_full_neuron $end
+$var wire 18 ! neuron_output [17:0] $end
+$var reg 8 " bias_in [7:0] $end
+$var reg 8 # w0 [7:0] $end
+$var reg 8 $ w1 [7:0] $end
+$var reg 8 % w2 [7:0] $end
+$var reg 8 & w3 [7:0] $end
+$var reg 8 ' x0 [7:0] $end
+$var reg 8 ( x1 [7:0] $end
+$var reg 8 ) x2 [7:0] $end
+$var reg 8 * x3 [7:0] $end
+$scope module uut_neuron $end
+$var wire 8 + bias_in [7:0] $end
+$var wire 8 , w0 [7:0] $end
+$var wire 8 - w1 [7:0] $end
+$var wire 8 . w2 [7:0] $end
+$var wire 8 / w3 [7:0] $end
+$var wire 8 0 x0 [7:0] $end
+$var wire 8 1 x1 [7:0] $end
+$var wire 8 2 x2 [7:0] $end
+$var wire 8 3 x3 [7:0] $end
+$var wire 18 4 sum_before_relu [17:0] $end
+$var wire 18 5 neuron_output [17:0] $end
+$scope module uut_neuron_core $end
+$var wire 8 6 bias_in [7:0] $end
+$var wire 8 7 w0 [7:0] $end
+$var wire 8 8 w1 [7:0] $end
+$var wire 8 9 w2 [7:0] $end
+$var wire 8 : w3 [7:0] $end
+$var wire 8 ; x0 [7:0] $end
+$var wire 8 < x1 [7:0] $end
+$var wire 8 = x2 [7:0] $end
+$var wire 8 > x3 [7:0] $end
+$var wire 18 ? sum_out [17:0] $end
+$var wire 18 @ s_products [17:0] $end
+$var wire 17 A s1 [16:0] $end
+$var wire 17 B s0 [16:0] $end
+$var wire 16 C p3 [15:0] $end
+$var wire 16 D p2 [15:0] $end
+$var wire 16 E p1 [15:0] $end
+$var wire 16 F p0 [15:0] $end
+$var wire 18 G bias_extended [17:0] $end
+$upscope $end
+$scope module uut_relu $end
+$var wire 18 H input_val [17:0] $end
+$var wire 18 I output_val [17:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 I
+b0 H
+b0 G
+b0 F
+b0 E
+b0 D
+b0 C
+b0 B
+b0 A
+b0 @
+b0 ?
+b0 >
+b0 =
+b0 <
+b0 ;
+b0 :
+b0 9
+b0 8
+b0 7
+b0 6
+b0 5
+b0 4
+b0 3
+b0 2
+b0 1
+b0 0
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+b110001 !
+b110001 5
+b110001 I
+b1 G
+b1 "
+b1 +
+b1 6
+b101 C
+b101 &
+b101 /
+b101 :
+b1101 A
+b1000 D
+b100 %
+b100 .
+b100 9
+b1111 E
+b11 $
+b11 -
+b11 8
+b110001 4
+b110001 ?
+b110001 H
+b110000 @
+b100011 B
+b10100 F
+b10 #
+b10 ,
+b10 7
+b1 *
+b1 3
+b1 >
+b10 )
+b10 2
+b10 =
+b101 (
+b101 1
+b101 <
+b1010 '
+b1010 0
+b1010 ;
+#20
+b0 !
+b0 5
+b0 I
+b10 &
+b10 /
+b10 :
+b10 %
+b10 .
+b10 9
+b10 $
+b10 -
+b10 8
+b1111111111111110 C
+b11111111 *
+b11111111 3
+b11111111 >
+b11111111111111100 A
+b1111111111111110 D
+b11111111 )
+b11111111 2
+b11111111 =
+b1111111111111110 E
+b11111111 (
+b11111111 1
+b11111111 <
+b111111111111111001 4
+b111111111111111001 ?
+b111111111111111001 H
+b111111111111111000 @
+b11111111111111100 B
+b1111111111111110 F
+b11111111 '
+b11111111 0
+b11111111 ;
+#30
+b111111101 !
+b111111101 5
+b111111101 I
+b1 &
+b1 /
+b1 :
+b1 %
+b1 .
+b1 9
+b1 $
+b1 -
+b1 8
+b1 #
+b1 ,
+b1 7
+b1111111 C
+b1111111 *
+b1111111 3
+b1111111 >
+b11111110 A
+b1111111 D
+b1111111 )
+b1111111 2
+b1111111 =
+b1111111 E
+b1111111 (
+b1111111 1
+b1111111 <
+b111111101 4
+b111111101 ?
+b111111101 H
+b111111100 @
+b11111110 B
+b1111111 F
+b1111111 '
+b1111111 0
+b1111111 ;
+#40
+b0 !
+b0 5
+b0 I
+b0 G
+b0 "
+b0 +
+b0 6
+b0 &
+b0 /
+b0 :
+b0 %
+b0 .
+b0 9
+b0 $
+b0 -
+b0 8
+b0 #
+b0 ,
+b0 7
+b0 C
+b0 *
+b0 3
+b0 >
+b0 A
+b0 D
+b0 )
+b0 2
+b0 =
+b0 E
+b0 (
+b0 1
+b0 <
+b0 4
+b0 ?
+b0 H
+b0 @
+b0 B
+b0 F
+b0 '
+b0 0
+b0 ;
+#50
+b0 !
+b0 5
+b0 I
+b1111111 G
+b1111111 "
+b1111111 +
+b1111111 6
+b1111111110000000 C
+b1 &
+b1 /
+b1 :
+b11111111100000000 A
+b1111111110000000 D
+b1 %
+b1 .
+b1 9
+b1111111110000000 E
+b1 $
+b1 -
+b1 8
+b111111111001111111 4
+b111111111001111111 ?
+b111111111001111111 H
+b111111111000000000 @
+b11111111100000000 B
+b1111111110000000 F
+b1 #
+b1 ,
+b1 7
+b10000000 *
+b10000000 3
+b10000000 >
+b10000000 )
+b10000000 2
+b10000000 =
+b10000000 (
+b10000000 1
+b10000000 <
+b10000000 '
+b10000000 0
+b10000000 ;
+#60
+b10 !
+b10 5
+b10 I
+b1 G
+b1 "
+b1 +
+b1 6
+b11 $
+b11 -
+b11 8
+b10 #
+b10 ,
+b10 7
+b1111111111110000 C
+b11110000 *
+b11110000 3
+b11110000 >
+b11111111111111010 A
+b1010 D
+b1010 )
+b1010 2
+b1010 =
+b1111111111111101 E
+b11111111 (
+b11111111 1
+b11111111 <
+b10 4
+b10 ?
+b10 H
+b1 @
+b111 B
+b1010 F
+b101 '
+b101 0
+b101 ;
+#70
