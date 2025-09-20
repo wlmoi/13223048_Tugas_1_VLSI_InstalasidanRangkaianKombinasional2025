@@ -7,7 +7,7 @@ module testbench_and_gate_32bit;
     reg [31:0] test_b;
     wire [31:0] test_y;
 
-    // Instansiasi UUT (Gerbang AND 32-bit)
+    // Initiate UUT (Gerbang AND 32-bit)
     and_gate_32bit uut_and_gate (
         .a(test_a),
         .b(test_b),
@@ -16,8 +16,8 @@ module testbench_and_gate_32bit;
 
     // Dump waveform untuk GTKWave
     initial begin
-        $dumpfile("and_gate_32bit.vcd"); // Nama file VCD
-        $dumpvars(0, testbench_and_gate_32bit); 
+        $dumpfile("and_gate_32bit.vcd"); // Nama file VCD (untuk GTKWave)
+        $dumpvars(0, testbench_and_gate_32bit); // Dump semua variabel dalam testbench
     end
 
     // Generasi stimulus
